@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <style>
+   h1{
+       margin-top: 5%px;
+       background-color: rgb(42, 161, 165);
+   }
+   body{
+       background-color: rgb(0, 183, 255);
+   }
+   </style>
+    <title>Document</title>
+    <script>
+    function  javascriptForm(){
+            var name = document.myForm.firstName.value;
+            var lastname = document.myForm.surName.value;
+           var other = document.myForm.otherName.value;
+           var subJect = document.myForm.subject.value;
+           var mesSage = document.myForm.message.value;
+           var fullname = name+""+ lastname;
+
+            if (name.length<3){
+                alert("first name can't be less than 3 character");
+                return false;
+                }else if (lastname.length<3){
+                    alert("surname can't be less than 3 character");
+                return false;
+                }else if (subJect.length<3){
+                    alert("subject can't be less than 3 character");
+                return false;
+                }else if (mesSage.length<3){
+                    alert("message can't be less than 3 character");
+                return false;
+                }else if (fullname!==""){
+                    alert("welcome" +fullname);
+                return false;
+                }
+
+
+    
+    }
+    
+    </script>
+</head>
+<body>
+    <center>
+        <h1>Javascript form</h1>
+        <form name="myForm"  onsubmit="return javascriptForm()">
+            <input type="text" name="firstName" placeholder="firstname" required><br><br>
+            <input type="text" name="surName" placeholder="surname" required><br><br>
+            <input type="text" name="otherName" placeholder="othername" required><br><br>
+            <input type="text" name="subject" placeholder="subject" required><br><br>
+            <input type="text" name="message" placeholder="message" required><br><br>
+            <input type="submit" value="Enter">
+    </center>
+        </form>
+</body>
+</html>
